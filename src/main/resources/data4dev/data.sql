@@ -8,17 +8,17 @@ values ('user@gmail.com', '{noop}password', 'userFirstName', 'userLastName', 'us
        ('admin@gmail.com', '{noop}admin', 'adminFirstName', 'adminLastName', 'adminDisplayName'),
        ('guest@gmail.com', '{noop}guest', 'guestFirstName', 'guestLastName', 'guestDisplayName'),
        ('manager@gmail.com', '{noop}manager', 'managerFirstName', 'managerLastName', 'managerDisplayName'),
-       ('taras@gmail.com', '{noop}password', 'Тарас', 'Шевченко', '@taras'),
-       ('petlura@gmail.com', '{noop}password', 'Симон', 'Петлюра', '@epetl'),
-       ('moroz_a@gmail.com', '{noop}password', 'Александр', 'Мороз', '@Moroz93'),
-       ('antonio.nest@gmail.com', '{noop}password', 'Антон', 'Нестеров', '@antonio_nest'),
-       ('i.franko@gmail.com', '{noop}password', 'Иван', 'Франко', '@ifranko'),
-       ('g.skovoroda@gmail.com', '{noop}password', 'Григорий', 'Сковорода', '@Gregory24'),
-       ('arsh.and@gmail.com', '{noop}password', 'Андрей', 'Арш', '@arsh01'),
-       ('squirrel2011@gmail.com', '{noop}password', 'Леся', 'Иванюк', '@SmallSquirrel'),
-       ('nikk24@gmail.com', '{noop}password', 'Николай', 'Никулин', '@nikk'),
-       ('artem711@gmail.com', '{noop}password', 'Артем', 'Запорожец', '@Artt'),
-       ('max.pain@gmail.com', '{noop}password', 'Максим', 'Дудник', '@MaxPain'),
+       ('taras@gmail.com', '{noop}password', 'Taras', 'Shevchenko', '@taras'),
+       ('sjones80@gmail.com', '{noop}password', 'Simon', 'Jones', '@sjones80'),
+       ('moroz_a@gmail.com', '{noop}password', 'Alex', 'Moroz', '@Moroz93'),
+       ('antonio.nest@gmail.com', '{noop}password', 'Antonio', 'Nest', '@antonio_nest'),
+       ('i.franko@gmail.com', '{noop}password', 'Ivan', 'Franko', '@ifranko'),
+       ('g.skovoroda@gmail.com', '{noop}password', 'Gregory', 'Skorovoda', '@Gregory24'),
+       ('arsh.and@gmail.com', '{noop}password', 'Andrew', 'Arsh', '@arsh01'),
+       ('squirrel2011@gmail.com', '{noop}password', 'Lucy', 'Ivansson', '@SmallSquirrel'),
+       ('nikk24@gmail.com', '{noop}password', 'Nikolai', 'Petterson', '@nikk'),
+       ('artem711@gmail.com', '{noop}password', 'Artem', 'Zaza', '@Artt'),
+       ('max.pain@gmail.com', '{noop}password', 'Max', 'Dudnik', '@MaxPain'),
        ('admin@aws.co', '{noop}password', 'test', 'admin', '@testAdmin');
 
 -- 0 DEV
@@ -44,7 +44,6 @@ values (1, 0),
        (15, 1),
        (16, 1);
 
-
 insert into PROFILE (ID, LAST_FAILED_LOGIN, LAST_LOGIN, MAIL_NOTIFICATIONS)
 values (1, null, null, 49),
        (2, null, null, 14);
@@ -54,25 +53,24 @@ values (1, 'skype', 'userSkype'),
        (1, 'mobile', '+01234567890'),
        (1, 'website', 'user.com'),
        (2, 'github', 'adminGitHub'),
-       (2, 'tg', 'adminTg'),
-       (2, 'vk', 'adminVk');
+       (2, 'telegram', 'adminTg'),
+       (2, 'facebook', 'adminFb');
 
 delete
 from ATTACHMENT;
 alter
 sequence ATTACHMENT_ID_SEQ restart with 1;
 insert into ATTACHMENT (name, file_link, object_id, object_type, user_id, date_time)
-values ('Снимок экрана 1.png', './attachments/project/1_Снимок экрана 1.png', 2, 0, 4, '2023-05-04 22:28:50.215429'),
-       ('Снимок экрана 2.png', './attachments/project/2_Снимок экрана 2.png', 2, 0, 4, '2023-05-04 22:28:53.687600'),
-       ('Ежедневный-чеклист.xlsx', './attachments/project/3_Ежедневный-чеклист.xlsx', 2, 0, 4,
+values ('Screenshot 1.png', './attachments/project/1_Screenshot 1.png', 2, 0, 4, '2023-05-04 22:28:50.215429'),
+       ('Screenshot 2.png', './attachments/project/2_Screenshot 2.png', 2, 0, 4, '2023-05-04 22:28:53.687600'),
+       ('Daily-checklist.xlsx', './attachments/project/3_Daily-checklist.xlsx', 2, 0, 4,
         '2023-05-04 22:31:15.166547'),
-       ('Снимок экрана 1.png', './attachments/task/1_Снимок экрана 1.png', 41, 2, 4, '2023-05-04 22:28:53.687600'),
-       ('Снимок экрана 2.png', './attachments/task/2_Снимок экрана 2.png', 41, 2, 4, '2023-05-04 22:28:50.215429'),
-       ('Ежедневный-чеклист.xlsx', './attachments/task/3_Ежедневный-чеклист.xlsx', 38, 2, 4,
+       ('Screenshot 1.png', './attachments/task/1_Screenshot 1.png', 41, 2, 4, '2023-05-04 22:28:53.687600'),
+       ('Screenshot 2.png', './attachments/task/2_Screenshot 2.png', 41, 2, 4, '2023-05-04 22:28:50.215429'),
+       ('Daily-checklist.xlsx', './attachments/task/3_Daily-checklist.xlsx', 38, 2, 4,
         '2023-05-04 22:28:50.215429');
 alter
 sequence ATTACHMENT_ID_SEQ restart with 1000;
-
 
 -- populate tasks
 delete
@@ -93,10 +91,10 @@ alter
 sequence ACTIVITY_ID_SEQ restart with 1;
 
 insert into PROJECT (code, title, description, type_code, parent_id)
-values ('JiraRush', 'JiraRush', '«Mini-JIRA» app : project management system tutorial app', 'task_tracker', null),
+values ('CodegymJira', 'CodegymJira', '«Mini-JIRA» app : project management system tutorial app', 'task_tracker', null),
        ('Test_Project', 'Test Project', 'Just test project', 'task_tracker', null),
        ('Test_Project_2', 'Test Project 2', 'Just test project 2', 'task_tracker', null),
-       ('JiraRush sub', 'JiraRush subproject', 'subproject', 'task_tracker', 1);
+       ('CodegymJira sub', 'CodegymJira subproject', 'subproject', 'task_tracker', 1);
 alter
 sequence PROJECT_ID_SEQ restart with 1000;
 

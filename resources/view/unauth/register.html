@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <th:block th:replace="~{layout/main::page(title='Register',appMain=~{::appMain})}">
     <appMain>
@@ -77,13 +77,9 @@
                            type="button">
                             <i class="fa-brands fa-google"></i>
                         </a>
-                        <a class="btn btn-primary btn-lg me-2" href="/oauth2/authorization/vk" style="padding-left: 17px; padding-right: 17px;"
+                        <a class="btn btn-primary btn-lg me-2" href="/oauth2/authorization/facebook" style="padding-left: 17px; padding-right: 17px;"
                            type="button">
-                            <i class="fa-brands fa-vk"></i>
-                        </a>
-                        <a class="btn btn-danger btn-lg me-2" href="/oauth2/authorization/yandex" style="padding-left: 21px; padding-right: 21px;"
-                           type="button">
-                            <i class="fa-brands fa-yandex"></i>
+                            <i class="fa-brands fa-facebook"></i>
                         </a>
                         <a class="btn btn-dark btn-lg me-2" href="/oauth2/authorization/github" type="button">
                             <i class="fa-brands fa-github"></i>

@@ -1,11 +1,10 @@
-В настройках nginx `cat /etc/nginx/nginx.conf` есть сканирование активных
-конфигураций: `include /etc/nginx/sites-enabled/*;`
-В каталоге `/etc/nginx/sites-enabled/` если линк на профиль по умолчанию: `ls -la /etc/nginx/sites-enabled/`
-[Меняем его на наш профиль](https://unix.stackexchange.com/a/152000/216630):
+nginx settings `cat /etc/nginx/nginx.conf` includes scanning of active configurations: `include /etc/nginx/sites-enabled/*;`
+In the catalog `/etc/nginx/sites-enabled/` if the default link to profile is: `ls -la /etc/nginx/sites-enabled/`
+[Change it to our profile](https://unix.stackexchange.com/a/152000/216630):
 
 ```
 cd /etc/nginx/sites-enabled/
-sudo ln -sfn /opt/jirarush/config/nginx.conf default
+sudo ln -sfn /opt/codegymjira/config/nginx.conf default
 cat default
 sudo service nginx reload (start/stop)
 ```

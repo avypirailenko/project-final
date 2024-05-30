@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<!--/*@thymesVar id="task" type="com.javarush.jira.bugtracking.task.to.TaskToFull"*/-->
+<!--/*@thymesVar id="task" type="com.codegym.jira.bugtracking.task.to.TaskToFull"*/-->
 <!--/*@thymesVar id="fragment" type="boolean"*/-->
-<!--/*@thymesVar id="comments" type="java.util.List<com.javarush.jira.bugtracking.task.to.ActivityTo>"*/-->
-<!--/*@thymesVar id="activities" type="java.util.List<com.javarush.jira.bugtracking.task.to.ActivityTo>"*/-->
+<!--/*@thymesVar id="comments" type="java.util.List<com.codegym.jira.bugtracking.task.to.ActivityTo>"*/-->
+<!--/*@thymesVar id="activities" type="java.util.List<com.codegym.jira.bugtracking.task.to.ActivityTo>"*/-->
 
 <th:block th:replace="~{layout/bugtrackLayout::view(${task}, '/ui/tasks/edit/', ~{::task}, ${fragment})}">
     <task>

@@ -9,11 +9,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.javarush</groupId>
+    <groupId>com.codegym</groupId>
     <artifactId>jira</artifactId>
     <version>1.0</version>
-    <name>JiraRush</name>
-    <description>Mini-JIRA from JavaRush</description>
+    <name>CodegymJira</name>
+    <description>Mini-JIRA from Codegym</description>
 
     <properties>
         <java.version>17</java.version>
@@ -96,7 +96,10 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <!-- added version and removed optional because of mvn compile error if using JDK21.
+            Keep optional and remove version if using JDK <21 -->
+            <version>1.18.30</version>
+            <!-- <optional>true</optional> -->
         </dependency>
         <dependency>
             <groupId>org.mapstruct</groupId>

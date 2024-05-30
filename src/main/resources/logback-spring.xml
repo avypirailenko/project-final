@@ -15,12 +15,12 @@
 
     <springProfile name="prod">
         <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-            <file>logs/jirarush.log</file>
+            <file>logs/codegymjira.log</file>
             <encoder>
                 <pattern>%d{MM-dd HH:mm:ss.SSS} [%8.8thread] %-5.5level| %class{60}.%M:%L %msg%n</pattern>
             </encoder>
             <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-                <fileNamePattern>logs/jirarush.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <fileNamePattern>logs/codegymjira.%d{yyyy-MM-dd}.log</fileNamePattern>
                 <maxHistory>30</maxHistory>
             </rollingPolicy>
         </appender>

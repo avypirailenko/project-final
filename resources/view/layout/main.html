@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <th:block th:fragment="page"
-          th:with="img=${img}?: 'https://javarush.com/assets/images/site/homepage/og-image-jr.jpg', descr=${descr}?: ${title}">
+          th:with="img=${img}?: 'https://codegym.cc/assets/images/site/homepage/og-image-cg.jpg', descr=${descr}?: ${title}">
     <head>
         <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
         <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -21,11 +21,11 @@
         <link href="/static/jquery/css/ui.fancytree.css" rel="stylesheet"/>
 
         <link rel="image_src" th:href="${img}"/>
-        <meta CONTENT="Java,программист,курсы,обучение,трудоустройво,разработчик,практика,bugtracking,jira"
+        <meta CONTENT="Java,programmer,course,learning,job,developer,practice,bugtracking,jira"
               name="keywords">
         <!-- facebook & Open Graph -->
         <meta content="website" property="og:type"/>
-        <meta content="Jira Rush" property="og:site_name">
+        <meta content="CodegymJira" property="og:site_name">
         <meta property="og:title" th:content="${title}"/>
         <meta property="og:description" th:content="${descr}"/>
         <meta property="og:image" th:content="${img}"/>

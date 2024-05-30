@@ -82,7 +82,7 @@ $(function () {
             ]
         ],
         "createdRow": function (row, data, dataIndex) {
-            $(row).addClass("data-enabled") // пробовал добавить class="data-enabled" тегу <tr> в users, так не работало
+            $(row).addClass("data-enabled") // tried adding class="data-enabled" for <tr> in users, did not work
             if (data.endpoint) {
                 $(row).attr("enabled", false);
             }

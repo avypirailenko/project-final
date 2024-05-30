@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<!--/*@thymesVar id="authUser" type="com.javarush.jira.login.AuthUser"*/-->
+<!--/*@thymesVar id="authUser" type="com.codegym.jira.login.AuthUser"*/-->
 
 <div th:fragment="sidebar">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-left sidebar-nav" id="navbar">
@@ -10,10 +10,10 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand me-auto" href="/">
-            <img alt="JavaRush" class="d-inline-block d-none d-lg-block align-text-top ms-3 ms-lg-4 mt-0 mt-lg-2"
-                 src="/static/images/logo/jr.svg">
-            <img alt="JavaRush" class="d-inline-block d-lg-none align-text-top ms-3 ms-lg-4 mt-0 mt-lg-2"
-                 src="/static/images/logo/jr-text.svg">
+            <img alt="Codegym" class="d-inline-block d-none d-lg-block align-text-top ms-3 ms-lg-4 mt-0 mt-lg-2"
+                 src="/static/images/logo/cg.svg">
+            <img alt="Codegym" class="d-inline-block d-lg-none align-text-top ms-3 ms-lg-4 mt-0 mt-lg-2"
+                 src="/static/images/logo/cg-text.svg">
             <hr class="text-white d-none d-lg-block" style="width: 232px">
         </a>
         <div th:if="${authUser} == null">

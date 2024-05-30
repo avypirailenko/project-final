@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!-- view/edit layouts for Task, Sprint, Project -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<!--/*@thymesVar id="codeTo" type="com.javarush.jira.common.to.CodeTo"*/-->
-<!--/*@thymesVar id="attachs" type="java.util.List<com.javarush.jira.bugtracking.attachment.Attachment>"*/-->
-<!--/*@thymesVar id="belongs" type="java.util.List<com.javarush.jira.bugtracking.UserBelong>"*/-->
+<!--/*@thymesVar id="codeTo" type="com.codegym.jira.common.to.CodeTo"*/-->
+<!--/*@thymesVar id="attachs" type="java.util.List<com.codegym.jira.bugtracking.attachment.Attachment>"*/-->
+<!--/*@thymesVar id="belongs" type="java.util.List<com.codegym.jira.bugtracking.UserBelong>"*/-->
 
 <th:block th:fragment="view(codeTo, urlEdit, content, fragment)">
     <th:block
@@ -12,7 +12,7 @@
             <div class="card mb-3">
                 <div class="card-body">
                     <h4 class="data-enabled" th:attr="enabled=${codeTo.enabled}" th:text="${codeTo.code}"/>
-                    <h2 th:if="${codeTo instanceof T(com.javarush.jira.common.to.TitleTo)}"
+                    <h2 th:if="${codeTo instanceof T(com.codegym.jira.common.to.TitleTo)}"
                         th:text="${codeTo.title}"></h2>
                     <div th:if="${!belongs.isEmpty()}">
                         <hr>
@@ -66,10 +66,10 @@
                 <div class="card-body">
                     <form method="post" th:action="@{${urlSave}}" th:object="${__${objectName}__}">
                         <input hidden th:field="*{id}">
-                        <div th:if="${codeTo instanceof T(com.javarush.jira.common.to.TitleTo)}">
+                        <div th:if="${codeTo instanceof T(com.codegym.jira.common.to.TitleTo)}">
                             <div th:replace="~{::inputField('Title', 'title')}"></div>
                         </div>
-                        <div th:hidden="${codeTo instanceof T(com.javarush.jira.bugtracking.task.to.TaskTo)}">
+                        <div th:hidden="${codeTo instanceof T(com.codegym.jira.bugtracking.task.to.TaskTo)}">
                             <div th:replace="~{::inputField(labelText='Code', fieldName='code')}"></div>
                         </div>
                         <br>

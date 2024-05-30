@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<!--/*@thymesVar id="task" type="com.javarush.jira.bugtracking.task.to.TaskToFull"*/-->
-<!--/*@thymesVar id="statuses" type="java.util.Map<String, com.javarush.jira.ref.RefTo>"*/-->
-<!--/*@thymesVar id="types" type="java.util.Map<String, com.javarush.jira.ref.RefTo>"*/-->
-<!--/*@thymesVar id="priorities" type="java.util.Map<String, com.javarush.jira.ref.RefTo>"*/-->
-<!--/*@thymesVar id="comments" type="java.util.List<com.javarush.jira.bugtracking.task.to.ActivityTo>"*/-->
-<!--/*@thymesVar id="authUser" type="com.javarush.jira.login.AuthUser"*/-->
+<!--/*@thymesVar id="task" type="com.codegym.jira.bugtracking.task.to.TaskToFull"*/-->
+<!--/*@thymesVar id="statuses" type="java.util.Map<String, com.codegym.jira.ref.RefTo>"*/-->
+<!--/*@thymesVar id="types" type="java.util.Map<String, com.codegym.jira.ref.RefTo>"*/-->
+<!--/*@thymesVar id="priorities" type="java.util.Map<String, com.codegym.jira.ref.RefTo>"*/-->
+<!--/*@thymesVar id="comments" type="java.util.List<com.codegym.jira.bugtracking.task.to.ActivityTo>"*/-->
+<!--/*@thymesVar id="authUser" type="com.codegym.jira.login.AuthUser"*/-->
 
 <th:block
         th:replace="~{layout/bugtrackLayout::edit(${task}, '/ui/tasks', '/api/tasks/' + ${task.id}, ~{::appEdit}, 'task')}">

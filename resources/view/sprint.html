@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<!--/*@thymesVar id="sprint" type="com.javarush.jira.bugtracking.sprint.to.SprintToFull"*/-->
+<!--/*@thymesVar id="sprint" type="com.codegym.jira.bugtracking.sprint.to.SprintToFull"*/-->
 <!--/*@thymesVar id="fragment" type="boolean"*/-->
-<!--/*@thymesVar id="authUser" type="com.javarush.jira.login.AuthUser"*/-->
+<!--/*@thymesVar id="authUser" type="com.codegym.jira.login.AuthUser"*/-->
 <th:block
         th:replace="~{layout/bugtrackLayout::view(${sprint}, ${authUser.isManager()}?'/ui/mngr/sprints/edit/':null, ~{::sprint}, ${fragment})}">
     <sprint>

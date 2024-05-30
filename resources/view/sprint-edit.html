@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<!--/*@thymesVar id="sprint" type="com.javarush.jira.bugtracking.sprint.to.SprintToFull"*/-->
-<!--/*@thymesVar id="statuses" type="java.util.Map<String, com.javarush.jira.ref.RefTo>"*/-->
+<!--/*@thymesVar id="sprint" type="com.codegym.jira.bugtracking.sprint.to.SprintToFull"*/-->
+<!--/*@thymesVar id="statuses" type="java.util.Map<String, com.codegym.jira.ref.RefTo>"*/-->
 
 <th:block
         th:replace="~{layout/bugtrackLayout::edit(${sprint}, '/ui/mngr/sprints', '/api/mngr/sprints/' + ${sprint.id}, ~{::appEdit}, 'sprint')}">
